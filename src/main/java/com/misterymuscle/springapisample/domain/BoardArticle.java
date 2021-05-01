@@ -24,7 +24,7 @@ public class BoardArticle {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int boardIdx;
+    private long boardIdx;
     private String boardTitle;
     private String boardContent;
     private Date boardRegDate;
