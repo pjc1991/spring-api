@@ -1,9 +1,13 @@
 package com.misterymuscle.springapisample.controller;
 
+import java.util.List;
+
 import com.misterymuscle.springapisample.dto.BoardArticleDto;
+import com.misterymuscle.springapisample.dto.BoardArticleSearch;
 import com.misterymuscle.springapisample.service.BoardService;
 
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,6 +27,12 @@ public class ApiController {
     @PostMapping()
     public BoardArticleDto createItem(@RequestBody BoardArticleDto dto){
         return boardService.insertBoardArticle(dto);
+    }
+
+    @ResponseStatus(HttpStatus.OK)
+    @GetMapping()
+    public List<BoardArticleDto> ListBoardArticles(@RequestBody BoardArticleSearch search){
+        return boardService.selectBoardArticles(search);
     }
     
 }

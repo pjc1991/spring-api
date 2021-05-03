@@ -3,13 +3,11 @@ package com.misterymuscle.springapisample.dto;
 import java.util.Date;
 
 import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
-@Getter
-@Setter
+@Data
 @Builder
-public class BoardArticleDto {
+public class BoardArticleSearch {
 
     private long boardIdx;
     private String boardTitle;
@@ -17,5 +15,5 @@ public class BoardArticleDto {
     private Date boardRegDate;
     private Date boardModDate;
     private String memberId;
-    
+
 }
