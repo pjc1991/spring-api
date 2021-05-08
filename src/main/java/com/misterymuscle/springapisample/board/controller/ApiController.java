@@ -1,10 +1,10 @@
-package com.misterymuscle.springapisample.controller;
+package com.misterymuscle.springapisample.board.controller;
 
 import java.util.List;
 
-import com.misterymuscle.springapisample.dto.BoardArticleDto;
-import com.misterymuscle.springapisample.dto.BoardArticleSearch;
-import com.misterymuscle.springapisample.service.BoardService;
+import com.misterymuscle.springapisample.board.dto.BoardArticleDto;
+import com.misterymuscle.springapisample.board.dto.BoardArticleSearch;
+import com.misterymuscle.springapisample.board.service.BoardService;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;

@@ -1,6 +1,6 @@
-package com.misterymuscle.springapisample.repository;
+package com.misterymuscle.springapisample.board.repository;
 
-import com.misterymuscle.springapisample.domain.BoardArticle;
+import com.misterymuscle.springapisample.board.domain.BoardArticle;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

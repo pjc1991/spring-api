@@ -1,4 +1,4 @@
-package com.misterymuscle.springapisample.domain;
+package com.misterymuscle.springapisample.board.domain;
 
 import java.util.Date;
 

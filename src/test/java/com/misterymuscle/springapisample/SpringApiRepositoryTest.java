@@ -5,8 +5,8 @@ import java.util.List;
 import java.util.Random;
 import java.util.UUID;
 
-import com.misterymuscle.springapisample.domain.BoardArticle;
-import com.misterymuscle.springapisample.repository.BoardRepository;
+import com.misterymuscle.springapisample.board.domain.BoardArticle;
+import com.misterymuscle.springapisample.board.repository.BoardRepository;
 
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;

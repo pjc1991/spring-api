@@ -1,4 +1,4 @@
-package com.misterymuscle.springapisample.dto;
+package com.misterymuscle.springapisample.board.dto;
 
 import java.util.Date;
 

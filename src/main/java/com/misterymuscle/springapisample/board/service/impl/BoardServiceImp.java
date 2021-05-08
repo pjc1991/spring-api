@@ -1,12 +1,13 @@
-package com.misterymuscle.springapisample.service;
+package com.misterymuscle.springapisample.board.service.impl;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.misterymuscle.springapisample.domain.BoardArticle;
-import com.misterymuscle.springapisample.dto.BoardArticleDto;
-import com.misterymuscle.springapisample.dto.BoardArticleSearch;
-import com.misterymuscle.springapisample.repository.BoardRepository;
+import com.misterymuscle.springapisample.board.domain.BoardArticle;
+import com.misterymuscle.springapisample.board.dto.BoardArticleDto;
+import com.misterymuscle.springapisample.board.dto.BoardArticleSearch;
+import com.misterymuscle.springapisample.board.repository.BoardRepository;
+import com.misterymuscle.springapisample.board.service.BoardService;
 
 import org.springframework.stereotype.Service;
 
