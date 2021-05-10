@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.misterymuscle.springapisample.board.dto.BoardArticleDto;
 import com.misterymuscle.springapisample.board.dto.BoardArticleSearch;
+import com.misterymuscle.springapisample.board.dto.ResponseVO;
 import com.misterymuscle.springapisample.board.service.BoardService;
 
 import org.springframework.http.HttpStatus;
@@ -25,8 +26,10 @@ public class ApiController {
 
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping()
-    public BoardArticleDto createItem(@RequestBody BoardArticleDto dto){
-        return boardService.insertBoardArticle(dto);
+    public ResponseVO<BoardArticleDto> createItem(@RequestBody BoardArticleDto dto){
+        return new ResponseVO("Board Article Created",boardService.insertBoardArticle(dto));
+        
+        
     }
 
     @ResponseStatus(HttpStatus.OK)
