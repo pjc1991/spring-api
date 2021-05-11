@@ -27,15 +27,13 @@ public class ApiController {
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping()
     public ResponseVO<BoardArticleDto> createItem(@RequestBody BoardArticleDto dto){
-        return new ResponseVO("Board Article Created",boardService.insertBoardArticle(dto));
-        
-        
+        return new ResponseVO<BoardArticleDto>("Board Article Created",boardService.insertBoardArticle(dto));
     }
 
     @ResponseStatus(HttpStatus.OK)
     @GetMapping()
-    public List<BoardArticleDto> ListBoardArticles(@RequestBody BoardArticleSearch search){
-        return boardService.selectBoardArticles(search);
+    public ResponseVO<List<BoardArticleDto>> ListBoardArticles(@RequestBody BoardArticleSearch search){
+        return new ResponseVO<>("Board Article List", boardService.selectBoardArticles(search));
     }
     
 }
