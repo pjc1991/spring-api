@@ -32,7 +32,10 @@ public class ApiController {
 
     @ResponseStatus(HttpStatus.OK)
     @GetMapping()
-    public ResponseVO<List<BoardArticleDto>> ListBoardArticles(@RequestBody BoardArticleSearch search){
+    public ResponseVO<List<BoardArticleDto>> ListBoardArticles(@RequestBody(required = false) BoardArticleSearch search){
+        if(search == null){
+            search = new BoardArticleSearch();
+        }
         return new ResponseVO<>("Board Article List", boardService.selectBoardArticles(search));
     }
     
